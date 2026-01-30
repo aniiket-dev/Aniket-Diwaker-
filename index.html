@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Aniket Diwakar | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --bg: #030014;
+      --card-bg: rgba(17, 25, 40, 0.75);
+      --accent: #00d4ff; /* Changed to a "Cyber Blue" for Aniket */
+      --accent-glow: rgba(0, 212, 255, 0.3);
+      --text-main: #ffffff;
+      --text-dim: #b5b5b5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+        radial-gradient(at 50% 0%, hsla(200,39%,30%,1) 0, transparent 50%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+    header {
+      padding: 1.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; }
+    .logo span { color: var(--accent); }
+
+    .hero { padding: 6rem 0 3rem; text-align: center; }
+    .hero h1 { font-size: 4rem; font-weight: 900; line-height: 1.1; margin-bottom: 1rem; }
+    .hero h1 span {
+      background: linear-gradient(to right, #00d4ff, #7000ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
+    .social-icon { 
+      padding: 0.8rem 1.5rem; 
+      border-radius: 50px; 
+      background: rgba(255,255,255,0.05); 
+      border: 1px solid rgba(255,255,255,0.1);
+      color: white; 
+      text-decoration: none; 
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .social-icon:hover { background: var(--accent); color: #030014; transform: translateY(-3px); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+    .card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 10px 30px var(--accent-glow); }
+
+    .badge { background: rgba(0, 212, 255, 0.1); color: #99eaff; padding: 0.4rem 0.8rem; border-radius: 0.5rem; font-size: 0.8rem; border: 1px solid rgba(0, 212, 255, 0.3); display: inline-block; margin: 0.2rem; }
+
+    .contact-container { max-width: 600px; margin: 5rem auto; background: var(--card-bg); padding: 3rem; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.1); }
+    input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.8rem; color: white; outline: none; }
+    .btn { background: var(--accent); color: #030014; padding: 1rem 2rem; border: none; border-radius: 0.8rem; font-weight: 700; cursor: pointer; width: 100%; }
+
+    @media (max-width: 768px) { .hero h1 { font-size: 2.8rem; } }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="logo">ANIKET<span>.</span></div>
+    <nav style="display: flex; gap: 2rem;">
+      <a href="#projects" style="color: white; text-decoration: none;">Projects</a>
+      <a href="#contact" style="color: white; text-decoration: none;">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hi, I'm <span>Aniket Diwakar</span></h1>
+    <p style="color: var(--text-dim); font-size: 1.2rem; max-width: 750px; margin: 1rem auto;">Computer Science Engineer specialized in <strong>Machine Learning</strong> and <strong>Deep Learning</strong> architectures. Building the future of medical tech and intelligent systems.</p>
+    
+    <div class="social-links">
+      <a href="https://github.com/aniiket-dev" class="social-icon" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/aniket-diwakar-87a70333a/" class="social-icon" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <h2 id="projects">Core Engineering Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Brain Tumour Detection</h3>
+      <p>Developed a multi-model system using <strong>CNN, DNN, hybrid CNN+DNN</strong>, Transformer models, and <strong>VGG-16</strong> for high-accuracy tumour identification.</p>
+      <div style="margin-top: 1rem;">
+        <span class="badge">Python</span> <span class="badge">Deep Learning</span> <span class="badge">VGG-16</span> <span class="badge">Transformers</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Machine Learning Research</h3>
+      <p>Hands-on experience in building predictive models and optimizing neural network architectures for real-world datasets.</p>
+      <div style="margin-top: 1rem;">
+        <span class="badge">MLOps</span> <span class="badge">Data Science</span> <span class="badge">Optimization</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Software Development</h3>
+      <p>Focusing on clean code and scalable software design using modern development frameworks.</p>
+      <div style="margin-top: 1rem;">
+        <span class="badge">Git</span> <span class="badge">Clean Architecture</span> <span class="badge">Python</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-container" id="contact">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Connect with Aniket</h2>
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Message for Aniket regarding projects or opportunities..." required></textarea>
+      <button type="submit" class="btn">Send Request</button>
+    </form>
+  </div>
+</div>
+
+<footer style="text-align: center; padding: 3rem 0; color: var(--text-dim); border-top: 1px solid rgba(255,255,255,0.1);">
+  © 2026 Aniket Diwakar • Machine Learning Engineer • <a href="https://github.com/aniiket-dev" style="color: var(--accent);">aniiket-dev</a>
+</footer>
+
+</body>
+</html>
