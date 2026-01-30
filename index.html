@@ -8,7 +8,7 @@
     :root {
       --bg: #030014;
       --card-bg: rgba(17, 25, 40, 0.75);
-      --accent: #00d4ff; /* Changed to a "Cyber Blue" for Aniket */
+      --accent: #00d4ff; 
       --accent-glow: rgba(0, 212, 255, 0.3);
       --text-main: #ffffff;
       --text-dim: #b5b5b5;
@@ -51,7 +51,7 @@
       -webkit-text-fill-color: transparent;
     }
     
-    .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; }
+    .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
     .social-icon { 
       padding: 0.8rem 1.5rem; 
       border-radius: 50px; 
@@ -78,7 +78,8 @@
 
     .contact-container { max-width: 600px; margin: 5rem auto; background: var(--card-bg); padding: 3rem; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.1); }
     input, textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.8rem; color: white; outline: none; }
-    .btn { background: var(--accent); color: #030014; padding: 1rem 2rem; border: none; border-radius: 0.8rem; font-weight: 700; cursor: pointer; width: 100%; }
+    .btn { background: var(--accent); color: #030014; padding: 1rem 2rem; border: none; border-radius: 0.8rem; font-weight: 700; cursor: pointer; width: 100%; transition: 0.3s; }
+    .btn:hover { opacity: 0.9; transform: scale(1.02); }
 
     @media (max-width: 768px) { .hero h1 { font-size: 2.8rem; } }
   </style>
@@ -101,6 +102,7 @@
     <div class="social-links">
       <a href="https://github.com/aniiket-dev" class="social-icon" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/aniket-diwakar-87a70333a/" class="social-icon" target="_blank">LinkedIn</a>
+      <a href="mailto:aniketdtech@gmail.com" class="social-icon">Email Me</a>
     </div>
   </section>
 
@@ -130,11 +132,14 @@
   </div>
 
   <div class="contact-container" id="contact">
-    <h2 style="text-align: center; margin-bottom: 2rem;">Connect with Aniket</h2>
-    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
+    <h2 style="text-align: center; margin-bottom: 1rem;">Connect with Aniket</h2>
+    <p style="text-align: center; color: var(--text-dim); margin-bottom: 2rem; font-size: 0.9rem;">Direct inquiries: <a href="mailto:aniketdtech@gmail.com" style="color: var(--accent); text-decoration: none;">aniketdtech@gmail.com</a></p>
+    
+    <form action="https://formspree.io/f/aniketdtech@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Message for Aniket regarding projects or opportunities..." required></textarea>
+      <input type="text" name="_gotcha" style="display:none">
       <button type="submit" class="btn">Send Request</button>
     </form>
   </div>
